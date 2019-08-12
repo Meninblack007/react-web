@@ -1,3 +1,15 @@
-.App {
-  text-align: center;
+.container {
+  max-width: 600px;
+  margin: 0 auto !important;
+  float: none !important;
+  padding: 10rem;
+}
+
+.grid {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  column-gap: 4rem;
+  row-gap: 3rem;
+  grid-template-columns: repeat(auto-fill, 200px);
 }
