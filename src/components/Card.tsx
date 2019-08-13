@@ -7,27 +7,21 @@ import "../styles/Card.css";
 
 interface Props {
   title: string;
-  color: string;
-  shadowColor: string;
+  colorStyle: string;
 }
 
 export default class Card extends React.Component<Props> {
   static defaultProps: Props = {
     title: "Follow Me",
-    color: "#000000",
-    shadowColor: "#BA1E1D"
+    colorStyle: "card-container-doger-blue"
   };
 
   render() {
+    const { colorStyle, title } = this.props;
+
     return (
-      <div
-        className="card-container"
-        style={{
-          backgroundColor: this.props.color,
-          boxShadow: `0px 2px ${this.props.shadowColor}`
-        }}
-      >
-        <div className="title">{this.props.title}</div>
+      <div className={`card-container ${colorStyle}`}>
+        <div className="title">{title}</div>
       </div>
     );
   }

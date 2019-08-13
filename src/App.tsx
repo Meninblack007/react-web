@@ -4,41 +4,32 @@ import Card from "./components/Card";
 
 interface CardData {
   title: string;
-  color: string;
-  shadowColor: string;
+  colorStyle: string;
 }
 
 export default class App extends React.Component {
   data: CardData[] = [
     {
       title: "Follow Me",
-      color: "#4DB8FF",
-      shadowColor: "#1F90E1"
+      colorStyle: "card-container-doger-blue"
     },
     {
       title: "Add Image",
-      color: "#FE595C",
-      shadowColor: "#BA1E1D"
+      colorStyle: "card-container-carnation"
     },
     {
       title: "Location",
-      color: "#8E3BFF",
-      shadowColor: "#640BDA"
+      colorStyle: "card-container-electric-violet"
     },
     {
       title: "Add Videos",
-      color: "#4DB8FF",
-      shadowColor: "#1F90E1"
+      colorStyle: "card-container-doger-blue"
     }
   ];
 
   get renderView() {
     return this.data.map((item: CardData) => (
-      <Card
-        title={item.title}
-        color={item.color}
-        shadowColor={item.shadowColor}
-      />
+      <Card title={item.title} colorStyle={item.colorStyle} />
     ));
   }
 
